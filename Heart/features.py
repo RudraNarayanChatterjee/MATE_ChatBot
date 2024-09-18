@@ -16,6 +16,11 @@ connect_db()
 # Example of adding new sites to the database
 
 # add_site("Site name", "Site's url here")
+#Ex--
+# add_site("google", "https://www.google.com/")
+
+
+
 @eel.expose
 # Wishing Function  
 def start_up():
@@ -125,11 +130,8 @@ def text_input(Prompt):
 @eel.expose
 def Mate_funcs(text):
     
-      
-    
         print("Listening...")
         eel.displayFunc("Listening...")
-        
         
 
         eel.displayFunc(text)  # Show the user input 
@@ -150,7 +152,11 @@ def Mate_funcs(text):
         # If no site matched, continue with other features
         if not site_opened:
 
-            if "the time".lower() in text.lower():
+
+            if "Who are You".lower() in text.lower():
+                say("I  am  MATE  your  assistant . I am coded,  designed  and  developed  by . Rudra . A.K.A  Babai")
+
+            elif "the time".lower() in text.lower():
                 time=datetime.datetime.now().strftime("%H:%M:%S")
                 say(f"Sir the time is{time}")
             

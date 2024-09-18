@@ -7,14 +7,14 @@ import eel
 engine = pyttsx3.init('espeak')
 # rate = engine.getProperty('rate')   
 # print (rate)                        
-engine.setProperty('rate', 150)  
+engine.setProperty('rate', 140)  
 # volume = engine.getProperty('volume')   
 # print (volume)                          
 engine.setProperty('volume',1.0)   
 voices = engine.getProperty('voices')    
 # print (voices)    
 engine.setProperty('voice', voices[12].id) 
-engine.setProperty('pitch', 150)
+engine.setProperty('pitch', 200)
 
 def say(text):
     eel.displayFunc(text)
