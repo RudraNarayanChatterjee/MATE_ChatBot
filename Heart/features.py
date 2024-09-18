@@ -18,6 +18,7 @@ connect_db()
 # add_site("Site name", "Site's url here")
 #Ex--
 # add_site("google", "https://www.google.com/")
+# add_site("youtube", "https://www.youtube.com/")
 
 
 
@@ -145,8 +146,14 @@ def Mate_funcs(text):
         for site in sites:
             if f"open {site[0].strip().lower()}" in text.lower():
                 say(f"Opening {site[0]}...")
-                webbrowser.open_new(site[1])
-                site_opened = True
+                
+                print(f"Opening URL: {site[1]}")  # Debug print statement to check URL
+                try:
+                    webbrowser.open_new(site[1])  # Changed to `open()` instead of `open_new()`
+                    site_opened = True
+                except Exception as e:
+                    print(f"Failed to open {site[0]}: {e}")
+                    say(f"Failed to open {site[0]}.")
                 break  # Exit loop after finding the correct site
 
         # If no site matched, continue with other features
@@ -185,7 +192,8 @@ def Mate_funcs(text):
                 say(clean_response)
             
             
-       
+        print("Listening...")
+        eel.displayFunc("Listening...")
 
 
 
