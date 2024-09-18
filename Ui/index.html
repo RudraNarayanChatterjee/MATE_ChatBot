@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    />
+
+    <title>MATE</title>
+  </head>
+  <body>
+    <main>
+      <!-- Background -->
+      <div id="particles-js"></div>
+      <!-- -+-+-+-+-+-+- -->
+      <div class="START-UI">
+        <button>Start Mate</button>
+      </div>
+      <div class="AI-UI">
+        <header>
+          <div id="madeby">
+            <h1>MATE</h1>
+            <h1>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>by</span>&nbsp;<span
+                >Rudra</span
+              >
+            </h1>
+          </div>
+          <div class="glow-on-hover" id="settDiv">
+            <button id="SettingsBtn">
+              <i class="ri-settings-5-fill"></i>
+            </button>
+            <button id="CrossBtn" hidden>
+              <i class="ri-close-fill"></i>
+            </button>
+          </div>
+          <div id="menu">
+            <h4>Home</h4>
+            <h4>About</h4>
+            <h4>Contact</h4>
+            <h4>More</h4>
+          </div>
+        </header>
+
+        <section class="display-section">
+          <aside class="Dimension" id="Globe">
+            <div id="mateHood">
+              <div class="square">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+              </div>
+            </div>
+          </aside>
+
+          <aside class="Dimension" id="Text-Chat">
+            <h1 id="changleableText">Hi! I'm Mate.</h1>
+            <div id="history-section">
+              <div id="chat-canvas-body" class="offcanvas-body">
+                <!-- Chatting code here -->
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="input-section">
+          <aside id="voice-input" class="Dimension">
+            <div id="siri-container" hidden></div>
+          </aside>
+          <aside id="text-input" class="Dimension">
+            <input
+              type="text"
+              class="input-field"
+              name="chatbox"
+              id="chatbox"
+              placeholder="type here ... "
+            />
+            <button id="SendBtn" class="glow-on-hover" onclick="sendPrompt()">
+              <i class="ri-send-plane-fill"></i>
+            </button>
+            <button id="MicBtn-off" class="glow-on-hover">
+              <i class="ri-mic-2-line"></i>
+            </button>
+            <button id="MicBtn-on" class="glow-on-hover" hidden>
+              <i class="ri-mic-2-fill"></i>
+            </button>
+            <button id="ChatBtn-off" class="glow-on-hover">
+              <i id="off" class="ri-chat-3-line"></i>
+            </button>
+            <button id="ChatBtn-on" class="glow-on-hover" hidden>
+              <i id="on" class="ri-chat-3-fill"></i>
+            </button>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <!-- Gsap Things -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Siri Wave -->
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+
+    <script src="main.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>

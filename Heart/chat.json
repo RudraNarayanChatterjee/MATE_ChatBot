@@ -1,0 +1,80 @@
+[
+  {
+    "domain": ".huggingface.co",
+    "expirationDate": 1757937103,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "__stripe_mid",
+    "path": "/",
+    "sameSite": "strict",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "bd9bdfee-ebb4-4fbc-9750-d3545ccc3c842acd66"
+  },
+  {
+    "domain": ".huggingface.co",
+    "expirationDate": 1757937072.759135,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "token",
+    "path": "/",
+    "sameSite": "lax",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "oaJyXotkkbkKyzKxUfDTTzSxGutCmRVLepQKmAmEBVFCLIFGcZsVwCCXgFKLvCFkMZpCsMpKXDJiPaRymPYmdkspjKePzqMvYjDXiaScOHmnHcQdhDuUgiHkxCMkzzJl"
+  },
+  {
+    "domain": ".huggingface.co",
+    "expirationDate": 1726746704,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "aws-waf-token",
+    "path": "/",
+    "sameSite": "lax",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "3e06a0f2-4af7-498b-a41d-96ffe2bfb8d1:AAoAeAJSBAYZAAAA:wXF6S9GqXzwm44Odgs6Kk/TWd6DEFvmPNN+vPdGiosGvXUmxpytQuyw5vOo6nNmwA5zH7yVUlwVnPtYyjBfI2SQ8dzgjkfo4IR6rF2Ro+7A6Lxx8YEgPYBVpIHwu+oIGL9uxi0PBO3J56zY201urkvq2lkKKpbZUBFQIjg32EFZaS0e4tZP38/HCppW1xAln0SyZkpLEOOxrW/aniZB+N8A/DpJPvZV18mM7Kuzj83kl8oL/S61rXzLEssJD2pW7R3aGPIM="
+  },
+  {
+    "domain": ".huggingface.co",
+    "expirationDate": 1726402903,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "__stripe_sid",
+    "path": "/",
+    "sameSite": "strict",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "5d77167b-8bc4-473b-9ab2-a1e8c989abeb421073"
+  },
+  {
+    "domain": "huggingface.co",
+    "expirationDate": 1727610730.084745,
+    "hostOnly": true,
+    "httpOnly": true,
+    "name": "hf-chat",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "62327bc4-689b-437f-881a-392439493b65"
+  },
+  {
+    "domain": "huggingface.co",
+    "expirationDate": 1757937072.758986,
+    "hostOnly": true,
+    "httpOnly": true,
+    "name": "token",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "oaJyXotkkbkKyzKxUfDTTzSxGutCmRVLepQKmAmEBVFCLIFGcZsVwCCXgFKLvCFkMZpCsMpKXDJiPaRymPYmdkspjKePzqMvYjDXiaScOHmnHcQdhDuUgiHkxCMkzzJl"
+  }
+]
