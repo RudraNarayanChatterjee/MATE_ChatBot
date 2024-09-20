@@ -59,91 +59,6 @@ const backgroundAnimation = () => {
 };
 backgroundAnimation();
 
-// // Dotted Transparent Sphere inside the wavy animation
-// const createTransparentSphere = () => {
-//   // Initialize scene, camera, and renderer
-//   const scene = new THREE.Scene();
-//   const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-//   const renderer = new THREE.WebGLRenderer({ alpha: true });
-//   renderer.setSize(
-//     document.getElementById("Globe").offsetWidth,
-//     document.getElementById("Globe").offsetHeight
-//   ); // Match the size of the #Globe section
-//   document.getElementById("Globe").appendChild(renderer.domElement);
-
-//   // Set camera position
-//   camera.position.z = 50;
-
-//   document.getElementById("Globe").appendChild(renderer.domElement);
-
-//   const numParticles = 5000; // Number of particles
-//   const radius = 20; // Radius of the sphere
-
-//   // Create geometry and material for particles
-//   const geometry = new THREE.BufferGeometry();
-//   const positions = new Float32Array(numParticles * 3); // x, y, z for each particle
-//   const colors = new Float32Array(numParticles * 3); // RGB for each particle
-
-//   // Populate positions and colors
-//   for (let i = 0; i < numParticles; i++) {
-//     const theta = Math.random() * 10 * Math.PI;
-//     const phi = Math.acos(5 * Math.random() - 1);
-
-//     const x = radius * Math.sin(phi) * Math.cos(theta);
-//     const y = radius * Math.sin(phi) * Math.sin(theta);
-//     const z = radius * Math.cos(phi);
-
-//     positions[i * 3] = x;
-//     positions[i * 3 + 1] = y;
-//     positions[i * 3 + 2] = z;
-
-//     colors[i * 3] = 0x000000;
-//     colors[i * 3 + 1] = 0x000000;
-//     colors[i * 3 + 2] = 0x000000;
-//   }
-
-//   geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-//   geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
-
-//   const material = new THREE.PointsMaterial({ size: 1, vertexColors: true });
-
-//   const particles = new THREE.Points(geometry, material);
-//   scene.add(particles);
-
-//   // Animation function (rotate the sphere)
-//   const animate = function () {
-//     requestAnimationFrame(animate);
-
-//     // Update particle positions
-//     const positions = particles.geometry.attributes.position.array;
-//     for (let i = 0; i < numParticles; i++) {
-//       positions[i * 3] += (Math.random() - 0.5) * 0.1; // x
-//       positions[i * 3 + 1] += (Math.random() - 0.5) * 0.1; // y
-//       positions[i * 3 + 2] += (Math.random() - 0.5) * 0.1; // z
-
-//       // Ensure particles stay within the sphere
-//       const dist = Math.sqrt(
-//         positions[i * 3] ** 2 +
-//           positions[i * 3 + 1] ** 2 +
-//           positions[i * 3 + 2] ** 2
-//       );
-//       if (dist > radius) {
-//         positions[i * 3] *= radius / dist;
-//         positions[i * 3 + 1] *= radius / dist;
-//         positions[i * 3 + 2] *= radius / dist;
-//       }
-//     }
-
-//     particles.geometry.attributes.position.needsUpdate = true;
-
-//     renderer.render(scene, camera);
-//   };
-
-//   animate();
-// };
-// // Call the function to create the sphere
-// createTransparentSphere();
-
 // Function to create a rounded dot texture
 const createRoundedDotTexture = () => {
   const canvas = document.createElement("canvas");
@@ -306,9 +221,6 @@ const menubarAnimation = () => {
     opacity: 0,
     stagger: 0.3,
   });
-  // tl.from("#menu i", {
-  //   opacity: 0,
-  // });
   tl.pause();
 
   menu.addEventListener("click", () => {

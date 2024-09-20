@@ -99,7 +99,7 @@ def send_whatsapp_message():
 def chat_with_gemma(user_input):
     try:
         result = subprocess.run(
-            ['ollama', 'run', 'gemma2:2b'],
+            ['ollama', 'run', 'llama3.1:8b'],
             input=user_input,
             text=True,
             capture_output=True
@@ -149,7 +149,7 @@ def Mate_funcs(text):
                 
                 print(f"Opening URL: {site[1]}")  # Debug print statement to check URL
                 try:
-                    webbrowser.open_new(site[1])  # Changed to `open()` instead of `open_new()`
+                    webbrowser.open(site[1])  # Changed to `open()` instead of `open_new()`
                     site_opened = True
                 except Exception as e:
                     print(f"Failed to open {site[0]}: {e}")
@@ -182,7 +182,7 @@ def Mate_funcs(text):
             elif "sleep now".lower() in text.lower():
                 say(f"Goodbye! Sir.")
                 eel.displayFunc("Goodbye! Sir.")
-                time.sleep(1)
+                # time.sleep(1)
                 exit()
             
             else:

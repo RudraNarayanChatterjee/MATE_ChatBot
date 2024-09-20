@@ -1,26 +1,22 @@
 import speech_recognition as sr
 import os
-import pyttsx3
+from gtts import gTTS
+import subprocess
 import eel
+import re
+
+def remove_emojis(text):
+    return re.sub(r'[^\w\s,.]', '', text)  # Removes emojis and special characters
 
 
-engine = pyttsx3.init('espeak')
-# rate = engine.getProperty('rate')   
-# print (rate)                        
-engine.setProperty('rate', 140)  
-# volume = engine.getProperty('volume')   
-# print (volume)                          
-engine.setProperty('volume',1.0)   
-voices = engine.getProperty('voices')    
-# print (voices)    
-engine.setProperty('voice', voices[12].id) 
-engine.setProperty('pitch', 200)
-
-def say(text):
+def say(text, lang='en'):
     eel.displayFunc(text)
-    engine.say(text)
     eel.receiverText(text)
-    engine.runAndWait()
+    clean_text = remove_emojis(text)  # Clean the text
+    tts = gTTS(text=clean_text, lang=lang)
+    tts.save("output.mp3")
+    os.system("ffplay -nodisp -autoexit output.mp3")
+    
     
 
 
